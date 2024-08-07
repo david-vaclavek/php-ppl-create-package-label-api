@@ -1,0 +1,21 @@
+{
+    "name": "szymsza/php-ppl-create-package-label-api",
+    "description": "A PHP package using OAUTH implementation to allow easier communication with PPL CPL API (aka MyAPI2).",
+    "type": "library",
+    "require": {
+        "php": "^7.4",
+        "league/oauth2-client": "^2.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Szymsza\\PhpPplCreatePackageLabelApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jakub Szymsza",
+            "email": "jakub@szymsza.cz"
+        }
+    ]
+}
