@@ -135,7 +135,7 @@ class PPL {
     }
 
     /**
-     * Calls the API to get Swaggger JSON describing the available API endpoint.
+     * Calls the API to get Swaggger JSON describing the available API endpoints.
      * You can view this JSON by pasting it, e.g., to https://editor.swagger.io/
      *
      * @return string
