@@ -1,5 +1,5 @@
 {
-    "name": "szymsza/php-ppl-create-package-label-api",
+    "name": "szymsza/ppl-create-package-label-api",
     "description": "A PHP package using OAUTH implementation to allow easier communication with PPL CPL API (aka MyAPI2).",
     "type": "library",
     "require": {
