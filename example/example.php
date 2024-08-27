@@ -67,10 +67,12 @@ echo "Waiting for label creation...";
 
 // Wait for the label to be created on the server
 // Note - you probably want to use some smarter solution on production...
-sleep(5);
+do {
+    sleep(1);
 
-// Get the batch result
-$batchStatus = $ppl->requestJson($batchUrl);
+    // Get the batch result
+    $batchStatus = $ppl->requestJson($batchUrl);
+} while ($batchStatus->items[0]->importState !== "Complete");
 
 echo "<h3>Label data received</h3>";
 echo "<pre>";

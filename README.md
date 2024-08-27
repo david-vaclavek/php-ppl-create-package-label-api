@@ -86,10 +86,12 @@ $batchUrl = $ppl->requestHeader('shipment/batch', 'post', [
 
 // Wait for the label to be created on the server
 // Note - you probably want to use some smarter solution on production...
-sleep(5);
+do {
+    sleep(1);
 
-// Get the batch result
-$batchStatus = $ppl->requestJson($batchUrl);
+    // Get the batch result
+    $batchStatus = $ppl->requestJson($batchUrl);
+} while ($batchStatus->items[0]->importState !== "Complete");
 
 // Save the two types of labels for the first shipment
 $bigLabelUrl = $ppl->relativizeUrl($batchStatus->completeLabel->labelUrls[0]);
