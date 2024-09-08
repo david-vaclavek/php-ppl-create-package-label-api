@@ -15,11 +15,20 @@ class PPL {
 
     const API_ENDPOINT_PROD = 'https://api.dhl.com/ecs/ppl/myapi2/';
 
-    protected GenericProvider $provider;
+    /**
+     * @var GenericProvider $provider
+     */
+    protected $provider;
 
-    protected bool $isDevelopment;
+    /**
+     * @var bool $isDevelopment
+     */
+    protected $isDevelopment;
 
-    protected string $token;
+    /**
+     * @var string $token
+     */
+    protected $token;
 
     /**
      * @throws IdentityProviderException
